@@ -71,27 +71,31 @@ $faq = [
 </head>
 
 <body>
-    <div class="logo d-flex align-items-end">
-        <img height="50" src="./img/logo.png" alt="logo google">
-        <h5 class="text-secondary">Privacy e Termini</h5>
-    </div>
-    <nav class="navbar navbar-expand-lg navbar-light border-bottom border-3 pb-0">
-        <div class="container-fluid">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav">
-                    <a class="nav-link" aria-current="page" href="#">Introduzione</a>
-                    <a class="nav-link" href="#">Norme sulla privacy</a>
-                    <a class="nav-link" href="#">Termini di servizio</a>
-                    <a class="nav-link" href="#">Tecnologie</a>
-                    <a class="nav-link text-primary active border-bottom border-primary border-4" href="#">Domande frequenti</a>
+    <!-- Aggiunta sezione Header --- LOGO + NAV -->
+    <section class="site_header">
+        <div class="logo d-flex align-items-end">
+            <img height="50" src="./img/logo.png" alt="logo google">
+            <h5 class="text-secondary">Privacy e Termini</h5>
+        </div>
+        <nav class="navbar navbar-expand-lg navbar-light border-bottom border-3 pb-0">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <a class="nav-link" aria-current="page" href="#">Introduzione</a>
+                        <a class="nav-link" href="#">Norme sulla privacy</a>
+                        <a class="nav-link" href="#">Termini di servizio</a>
+                        <a class="nav-link" href="#">Tecnologie</a>
+                        <a class="nav-link text-primary active border-bottom border-primary border-4" href="#">Domande frequenti</a>
+                    </div>
                 </div>
             </div>
-        </div>
-    </nav>
-    
+        </nav>
+    </section>
+
+
     <div class="container">
         <?php foreach ($faq as $key => $elemento) : ?>
             <h3 class="mt-5 mb-2"> <?= $elemento['titolo']; ?></h3>
