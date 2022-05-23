@@ -72,7 +72,7 @@ $faq = [
 
 <body>
     <!-- Aggiunta sezione Header --- LOGO + NAV -->
-    <section class="site_header">
+    <header class="site_header">
         <div class="logo d-flex align-items-end">
             <img height="50" src="./img/logo.png" alt="logo google">
             <h5 class="text-secondary">Privacy e Termini</h5>
@@ -93,15 +93,18 @@ $faq = [
                 </div>
             </div>
         </nav>
-    </section>
+    </header>
 
+    <!-- Aggiunta main FAQ -->
+    <main class="site_main">
+        <div class="container">
+            <?php foreach ($faq as $key => $elemento) : ?>
+                <h3 class="mt-5 mb-2"> <?= $elemento['titolo']; ?></h3>
+                <?= $elemento['testo']; ?>
+            <?php endforeach; ?>
+        </div>
+    </main>
 
-    <div class="container">
-        <?php foreach ($faq as $key => $elemento) : ?>
-            <h3 class="mt-5 mb-2"> <?= $elemento['titolo']; ?></h3>
-            <?= $elemento['testo']; ?>
-        <?php endforeach; ?>
-    </div>
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
